@@ -1,0 +1,190 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
+struct Student {
+   char name[50];
+   char course[50];
+   int reg; 
+   float gpa;
+   };
+
+int main() {
+   struct Student student1, student2, student3, student4, student5, student6, student7, student8, student9, student10;
+
+   // Set password
+   char password[50] = "Waron1004";
+
+   // Set information for student1
+   strcpy(student1.name, "WanjiruNjogu");
+   strcpy(student1.course, "SoftwareEngineering");
+   student1.reg = 6464;  
+   student1.gpa = 4.5;
+   
+   // Set information for student2
+   strcpy(student2.name, "LarryMuchongori");
+   strcpy(student2.course, "procurement");
+   student2.reg = 5331;
+   student2.gpa = 3.5;
+   
+   // Set information for student3
+   strcpy(student3.name, "IreneNdegi");
+   strcpy(student3.course, "computerScience");
+   student3.reg = 1004;
+   student3.gpa = 5.6;
+   
+   // Set information for student4
+   strcpy(student4.name, "BernardMaina");
+   strcpy(student4.course, "WaterEngineering");
+   student4.reg = 1930; 
+   student4.gpa = 3.7;
+
+   // Set information for student5
+   strcpy(student5.name, "KelvinWamiti");
+   strcpy(student5.course, "medicalScience ");
+   student5.reg = 2757; 
+   student5.gpa = 5.9;
+   
+   // Set information for student6
+   strcpy(student6.name, "LewisMugambi");
+   strcpy(student6.course, "ElectricalEngineering");
+   student6.reg = 1974;
+   student6.gpa=5.7;
+   
+   
+   // Set information for student7
+   strcpy(student7.name, "VyonnaKimani");
+   strcpy(student7.course, "softwareEngineering");
+   student7.reg = 1682;  
+   student7.gpa = 4.9;
+   
+   // Set information for student8
+   strcpy(student8.name, "AnayaWangari");
+   strcpy(student8.course, "medicinePharmacy");
+   student8.reg = 1562; 
+   student8.gpa = 5.5;
+
+   // Set information for student9
+   strcpy(student9.name, "RitaMuthoni");
+   strcpy(student9.course, "civilEngineering");
+   student9.reg = 1747;  
+   student9.gpa = 4.9;
+   
+   // Set information for student10
+   strcpy(student10.name, "LizaWaithera");
+   strcpy(student10.course, "ScienceMusic");
+   student10.reg = 6748;
+   student10.gpa = 4.4;
+
+   printf("Welcome to the student information system.\n");
+
+   // Loop until password is entered correctly
+   char passwordInput[50];
+   int isPasswordCorrect = 0;
+   do {
+      printf("Enter password: ");
+      scanf("%s", passwordInput);
+      if (strcmp(passwordInput, password) == 0) {
+         isPasswordCorrect = 1;
+      } else {
+         printf("Incorrect password.\n");
+      }
+   } while(!isPasswordCorrect);
+
+   // Password is correct, allow user to access student information
+   while(1) {
+      printf("Enter student name (or type 'exit' to quit): ");
+      char nameInput[50];
+      scanf("%s", nameInput);
+      if (strcmp(nameInput, "exit") == 0) {
+         printf("Thank you for using the student information system.\n");
+         break;
+      } else if (strcmp(nameInput, student1.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student1.name);
+         printf("Course: %s\n", student1.course);
+         printf("Reg : %d\n", student1.reg);
+         printf("GPA: %0.2f\n", student1.gpa);
+         
+      } else if (strcmp(nameInput, student2.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student2.name);
+         printf("Course: %s\n", student2.course);
+         printf("Reg: %d\n", student2.reg);
+         printf("GPA: %0.2f\n", student2.gpa);
+        
+        } else if (strcmp(nameInput, student3.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student3.name);
+         printf("Course: %%s\n", student3.course);
+         printf("Reg: %d\n", student3.reg);
+         printf("GPA: %0.2f\n", student3.gpa);
+         
+      } else if (strcmp(nameInput, student4.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student4.name);
+         printf("Course: %s\n", student4.course);
+         printf("Reg: %d\n", student4.reg);
+         printf("GPA: %0.2f\n", student4.gpa);
+        
+        } else if (strcmp(nameInput, student5.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student5.name);
+         printf("Course: %%s\n", student5.course);
+         printf("Reg: %d\n", student5.reg);
+         printf("GPA: %0.2f\n", student5.gpa);
+         
+      } else if (strcmp(nameInput, student6.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student6.name);
+         printf("Course: %s\n", student6.course);
+         printf("Reg: %d\n", student6.reg);
+         printf("GPA: %0.2f\n", student6.gpa);
+        
+        } else if (strcmp(nameInput, student7.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student7.name);
+         printf("Course: %%s\n", student7.course);
+         printf("Reg: %d\n", student7.reg);
+         printf("GPA: %0.2f\n", student7.gpa);
+         
+      } else if (strcmp(nameInput, student8.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student8.name);
+         printf("Course: %s\n", student8.course);
+         printf("Reg: %d\n", student8.reg);
+         printf("GPA: %0.2f\n", student8.gpa);
+        
+        } else if (strcmp(nameInput, student9.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student9.name);
+         printf("Course: %%s\n", student9.course);
+         printf("Reg: %d\n", student9.reg);
+         printf("GPA: %0.2f\n", student9.gpa);
+         
+      } else if (strcmp(nameInput, student10.name) == 0) {
+         printf("Student found. Generating random information...\n");
+         srand(time(0)); // Use current time as seed for random generator
+         printf("Name: %s\n", student10.name);
+         printf("Course: %s\n", student10.course);
+         printf("Reg: %d\n", student10.reg);
+         printf("GPA: %0.2f\n", student10.gpa);
+         
+         
+      } else {
+         printf("Student not found. Please try again.\n");
+      }
+   }
+
+   return 0;
+}
